@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="libro — marketplace curado de libros usados.">
+<title>libro — libros usados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="#">libro<span>.</span></a>
+<nav><a href="#catalogo">Comprar</a><a href="#como-funciona">Cómo funciona</a><button class="link-button" data-action="sell">Vender un libro</button></nav>
+<button class="account-button" data-action="login">Entrar</button></header>
+<main>
+<section class="hero"><p class="eyebrow">SECOND-HAND BOOKS / ARGENTINA</p><h1>Libros con una<br><em>segunda vida.</em></h1>
+<p class="hero-copy">Un marketplace para descubrir, comprar y vender libros usados entre lectores.</p>
+<div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Buscar por título, autor o editorial…"></div></section>
+<section class="editorial-strip"><div><span>01</span><strong>Descubrí</strong><small>libros únicos</small></div><div><span>02</span><strong>Comprá</strong><small>con protección</small></div><div><span>03</span><strong>Vendé</strong><small>sin complicaciones</small></div></section>
+<section id="catalogo" class="catalog-section"><div class="section-head"><div><p class="eyebrow">CATÁLOGO</p><h2>Libros disponibles</h2></div>
+<select id="category"><option value="all">Todos</option><option value="literatura">Literatura</option><option value="filosofia">Filosofía</option><option value="arte">Arte</option><option value="ensayo">Ensayo</option></select></div><div id="book-grid" class="book-grid"></div></section>
+<section id="como-funciona" class="how-section"><div><p class="eyebrow">EL MODELO</p><h2>Como comprar<br><em>en una librería.</em></h2></div>
+<div class="steps"><article><span>01</span><h3>Encontrás</h3><p>Buscás un libro y revisás sus fotos, estado, precio y perfil del vendedor.</p></article>
+<article><span>02</span><h3>Pagás</h3><p>El dinero queda retenido hasta que el comprador confirma la recepción.</p></article>
+<article><span>03</span><h3>Recibís</h3><p>El vendedor despacha por Correo Argentino y carga el seguimiento.</p></article>
+<article><span>04</span><h3>Liberamos</h3><p>Cuando la entrega queda confirmada, el vendedor recibe el importe menos nuestra comisión.</p></article></div></section>
+</main>
+<footer><span>libro.</span><small>Una segunda vida para cada libro.</small><small>© 2026</small></footer>
+<dialog id="login-modal"><button class="close" data-close>×</button><p class="eyebrow">TU CUENTA</p><h2>Entrar a libro.</h2>
+<form id="login-form"><label>Email<input type="email" required placeholder="tu@email.com"></label><label>Contraseña<input type="password" required placeholder="••••••••"></label><button class="primary" type="submit">Entrar</button><p class="form-note">Demo: la autenticación real se incorporará con Neon Auth.</p></form></dialog>
+<dialog id="sell-modal"><button class="close" data-close>×</button><p class="eyebrow">PUBLICAR</p><h2>Vendé un libro.</h2>
+<form id="sell-form"><label>Título<input id="sell-title" required placeholder="Ej. Rayuela"></label><label>Autor<input id="sell-author" required placeholder="Julio Cortázar"></label><label>Precio<input id="sell-price" type="number" min="1" required placeholder="15000"></label><label>Estado<select><option>Como nuevo</option><option>Muy bueno</option><option>Bueno</option><option>Aceptable</option></select></label><button class="primary" type="submit">Publicar</button></form></dialog>
+<script src="app.js"></script></body></html>
